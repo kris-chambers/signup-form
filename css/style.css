@@ -5,7 +5,7 @@
   line-height: 1.5;
   --left-side-width: 380px;
   --right-side-width: calc(100vw - var(--left-side-width));
-  --left-side-height: 800px;
+  --left-side-height: 700px;
   --right-side-height: var(--left-side-height);
   --right-section-height: calc(var(--left-side-height) / 3);
 }
@@ -88,7 +88,8 @@ a:link,
 a:hover,
 a:active,
 a {
-  color: rgb(213, 191, 191);
+  color: #596d48;
+  text-decoration: none;
 }
 
 #right-side {
@@ -180,10 +181,6 @@ input {
 input:focus {
   border-color:1px blue;
   box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
-}
-
-input:valid {
-  
 }
 
 input:invalid {
