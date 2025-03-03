@@ -4,8 +4,8 @@
 :root {
   line-height: 1.5;
   --left-side-width: 380px;
-  --right-side-width: calc(100% - var(var(--left-side-width)));
-  --left-side-height: 575px;
+  --right-side-width: calc(100vw - var(--left-side-width));
+  --left-side-height: 800px;
   --right-side-height: var(--left-side-height);
   --right-section-height: calc(var(--left-side-height) / 3);
 }
@@ -104,20 +104,42 @@ a {
 }
 
 #top,
-#middle,
-#bottom {
+#middle {
   padding-left: 50px;
   height: var(--right-section-height);
+ 
+}
+
+#bottom {
+  padding-left: 50px;
+  height: calc(var(--right-section-height) - 15px);
 }
 
 #middle,
 #bottom {
   padding-top: 10px;
+  margin-top: 8px;
 }
 
 #top,
 #bottom {
   background-color: #f9fafb;
+}
+
+#middle {
+  box-shadow: 10px 5px 5px #cfd0d1;
+}
+
+#top-right-text {
+  position: absolute;
+  top: 30px;
+  padding-right: 300px;
+}
+
+#top-right-text > p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 15px;
 }
 
 .form-row {
@@ -130,8 +152,69 @@ a {
 
 label {
   display: block;
+  font-size: .8rem;
 }
 
 .right-column {
   margin-left: 60px;
+}
+
+#middle > form > h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+input {
+  font-size: 14px;
+	padding: 5px 10px;
+	width: 100%;
+	padding-left: 35px;
+	outline: none;
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #C4D1EB;
+	border-radius: 5px;
+	transition: .3s ease;
+}
+
+input:focus {
+  border-color:1px blue;
+  box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+input:valid {
+  
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.submit-btn {
+	box-shadow: 6px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #596d48 5%, #596d48 100%);
+	background-color:#596d48;
+	border-radius:8px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:14px 49px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.submit-btn:hover {
+	background:linear-gradient(to bottom, #596d48 5%, #596d48 100%);
+	background-color:#596d48;
+}
+.submit-btn:active {
+	position:relative;
+	top:1px;
+}
+
+#bottom > p {
+  margin-top: 20px;
 }
