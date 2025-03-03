@@ -1,0 +1,137 @@
+@import "modern-normalize.css";
+@import url('https://fonts.cdnfonts.com/css/norse');
+
+:root {
+  line-height: 1.5;
+  --left-side-width: 380px;
+  --right-side-width: calc(100% - var(var(--left-side-width)));
+  --left-side-height: 575px;
+  --right-side-height: var(--left-side-height);
+  --right-section-height: calc(var(--left-side-height) / 3);
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+#whole-form {
+  display: flex;
+}
+
+#background {
+  width: var(--left-side-width);
+  height: var(--left-side-height);
+}
+
+#background-image {
+  width: var(--left-side-width);
+  height: var(--left-side-height);
+  position: absolute;
+}
+
+#left-side {
+  width: var(--left-side-width);
+  height: var(--left-side-height);
+  display: flex;
+  position: relative;
+}
+
+#logo {
+  top: 100px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  width: var(--left-side-width);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+#odin-logo {
+  height: 100px;
+}
+
+#odin-text {
+  color: white;
+  font-family: 'Norse', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#credits {
+  color: rgb(213, 191, 191);
+  font-size: 0.6rem;
+  align-self: flex-end;
+  flex: auto;
+  position: absolute;
+  top: 550px;
+  left: 100px;
+}
+
+a:visited,
+a:link,
+a:hover,
+a:active,
+a {
+  color: rgb(213, 191, 191);
+}
+
+#right-side {
+  height: var(--right-side-height);
+}
+
+#right-side,
+#top,
+#middle,
+#bottom {
+  width: var(--right-side-width);
+  
+}
+
+#top,
+#middle,
+#bottom {
+  padding-left: 50px;
+  height: var(--right-section-height);
+}
+
+#middle,
+#bottom {
+  padding-top: 10px;
+}
+
+#top,
+#bottom {
+  background-color: #f9fafb;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-group {
+ display: flex;
+}
+
+label {
+  display: block;
+}
+
+.right-column {
+  margin-left: 60px;
+}
